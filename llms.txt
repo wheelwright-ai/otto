@@ -1,16 +1,16 @@
 # Wheelwright
-> Prose seed (v1) an agent uses to grow a user's AI-work setup like a nautilus shell: chamber by chamber, every cut driven by the user's goals, with a smoke test at the start and end of every cut.
+> Prose seed (v1) an agent uses to grow a user's AI-work setup like a nautilus shell: wave by wave, every cut driven by the user's goals, with a smoke test at the start and end of every cut.
 
 ## Docs
 - [START](START.md): order of authority and the cut loop; read first
 - [Charter](CHARTER.md): principles and governance
-- [Smoke](SMOKE.md): the living smoke test and the chamber 0 checks (S-0-01..S-0-08)
+- [Smoke](SMOKE.md): the living smoke test and the wave 0 checks (S-0-01..S-0-08)
 - [Goals](GOALS.md): the specialist interview (goals, direction, budget, progress, taste), goal template, measures and revisions
 - [Work](WORK.md): plan, execute, verify per item; the ledger
 - [Board](BOARD.md): how the board is generated, designed and delivered
-- [Chambers](CHAMBERS.md): the chambers and their seal conditions
+- [Waves](WAVES.md): the waves and their seal conditions. Earlier records call a wave a chamber.
 
 ## Optional
 - [Archive v0.1](archive/v0.1/README.md): the earlier seed, sealed reference ore (not instructions)
-- [Smoke candidates](journal/smoke-candidates.md): v0.1 scenarios mapped to chambers (not instructions)
+- [Smoke candidates](journal/smoke-candidates.md): v0.1 scenarios mapped to waves (not instructions)
 - [Journal](journal/genesis-events.jsonl): how this seed was built, patterns and anti-patterns

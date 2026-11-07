@@ -20,7 +20,7 @@ Cover, in this order, and come back to anything left at "later":
 4. **Seeing progress.** Just in time: what counts as meaningful enough to be told (a seal, a red check, a goal moving, a budget boundary near) and where to be told. On demand: the board, any time they ask.
 5. **Taste.** How they want what they see to look and read (BOARD.md, Design craft). "Later" here means the plain default, recorded as such.
 
-Ask once, too, at a natural point: other tools on the machine (for example a global agent hook) may write files into the wheel's folder; may the wheel keep such tool output out of tracking (`.gitignore`) when it appears? It is still recorded and never deleted without a yes (smoke S-0-07). In the same question, tell the user what the first cut's survey found among their global installs (`foreign` rows): the wheel runs raw, sets them aside and changes none of them (CHAMBERS.md).
+Ask once, too, at a natural point: other tools on the machine (for example a global agent hook) may write files into the wheel's folder; may the wheel keep such tool output out of tracking (`.gitignore`) when it appears? It is still recorded and never deleted without a yes (smoke S-0-07). In the same question, tell the user what the first cut's survey found among their global installs (`foreign` rows): the wheel runs raw, sets them aside and changes none of them (WAVES.md).
 
 Every answer is one ledger row quoting the user's words (WORK.md), with a `topic`:
 - goals: kind `goal`, `topic: goal`, and the goal written below.

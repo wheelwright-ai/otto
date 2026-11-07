@@ -4,13 +4,13 @@ The living smoke test: what MUST be there at the start of every cut, and still t
 
 ## Expectation shape
 ```yaml
-id: S-0-01            # S-<chamber>-<number>; never reused
-chamber: 0
+id: S-0-01            # S-<wave>-<number>; never reused
+wave: 0
 expects: what must exist, in one sentence
 check: |              # mechanical: commands or observations a fast model runs as written
   the steps, and the output that means pass
 added_in_cut: 0       # 0 = shipped with the seed; otherwise the wheel's cut number
-retired: null         # or {row: r-000123, reason: "..."}; only for a check of the open chamber
+retired: null         # or {row: r-000123, reason: "..."}; only for a check of the open wave
 ```
 
 ## Rules
@@ -18,11 +18,11 @@ retired: null         # or {row: r-000123, reason: "..."}; only for a check of t
 - `not_run` MUST carry a reason. A check skipped without one counts as `fail`.
 - A check that passed at start and fails at end MUST be remediated (START step 07) before the cut seals: fix it, re-run it, append a new `end` row and a `remediation` row naming both.
 - A check that fails at start becomes a work item in that cut's plan.
-- A check MAY be removed only with a ledger `decision` row giving the reason, and only while its chamber is open. Sealed chambers' checks stay forever.
-- Each chamber adds its own checks before it can seal. Each cut SHOULD propose a check for anything it found missing (START step 09).
+- A check MAY be removed only with a ledger `decision` row giving the reason, and only while its wave is open. Sealed waves' checks stay forever.
+- Each wave adds its own checks before it can seal. Each cut SHOULD propose a check for anything it found missing (START step 09).
 - A check MUST say what output means pass, and name a change that would turn it red. A check no change could fail checks nothing.
 
-## Checks: chamber 0
+## Checks: wave 0
 
 ### S-0-01 Goals drive the work
 - expects: `GOALS.md` exists with at least one active goal that has a measure, and every open work item names an active goal.
@@ -51,13 +51,13 @@ retired: null         # or {row: r-000123, reason: "..."}; only for a check of t
 
 ### S-0-06 A fresh session loads the rules
 - expects: `AGENTS.md` and the agent's own pointer file (Claude Code: `CLAUDE.md`) are byte-identical, and a fresh session's first line says which file it loaded.
-- check: (1) Neither file is a link, and `cmp AGENTS.md CLAUDE.md` exits 0. (2) Start a new session of the agent in the wheel's folder, in raw mode (seed/CHAMBERS.md), with the prompt `Where are we?` (Claude Code: `claude --setting-sources project,local --strict-mcp-config -p "Where are we?"`). (3) Its first output line is `Rules loaded from AGENTS.md.` or `Rules loaded from CLAUDE.md.`; quote it as evidence. Pass: all three hold. Red if: only one file exists, or the session never names the file it loaded.
+- check: (1) Neither file is a link, and `cmp AGENTS.md CLAUDE.md` exits 0. (2) Start a new session of the agent in the wheel's folder, in raw mode (seed/WAVES.md), with the prompt `Where are we?` (Claude Code: `claude --setting-sources project,local --strict-mcp-config -p "Where are we?"`). (3) Its first output line is `Rules loaded from AGENTS.md.` or `Rules loaded from CLAUDE.md.`; quote it as evidence. Pass: all three hold. Red if: only one file exists, or the session never names the file it loaded.
 - added_in_cut: 0
 
 ### S-0-07 The wheel holds only what it made
 - expects: every file in the wheel's folder was made by the wheel, approved by the user, or is a foreign file that is recorded and excluded from tracking.
 - foreign files: other tools on the machine may write into any folder where an agent session runs (for example a global agent hook writing logs under `docs/` or `runtime/`). The wheel lists each such file in a `foreign` ledger row (WORK.md): its path pattern, which tool wrote it, and the row that first saw it. Its pattern goes into `.gitignore` only after the user's yes (a `ruling` row quoting it; the interview asks once, GOALS.md). A foreign file is never deleted or moved without the user's yes.
-- check: (1) List every file in the wheel's folder outside `.git/`, `.local/` and `seed/`. (2) Sort each into: wheel-made (a ledger row naming it, or the chamber 0 layout in seed/CHAMBERS.md); approved (a `decision` or `ruling` row quoting the user's yes and naming it); foreign (it matches the pattern of a `foreign` row). (3) For each foreign file: a `ruling` row with the user's yes covers it, its pattern is a line in `.gitignore`, and in a git wheel `git ls-files` does not list it. Pass: every file is wheel-made, approved, or foreign and recorded and excluded. A foreign file recorded but still waiting for the yes: fail, evidence "waiting on the user's yes: <foreign row id>". Red if: a file is in no record, or a foreign file is tracked.
+- check: (1) List every file in the wheel's folder outside `.git/`, `.local/` and `seed/`. (2) Sort each into: wheel-made (a ledger row naming it, or the wave 0 layout in seed/WAVES.md); approved (a `decision` or `ruling` row quoting the user's yes and naming it); foreign (it matches the pattern of a `foreign` row). (3) For each foreign file: a `ruling` row with the user's yes covers it, its pattern is a line in `.gitignore`, and in a git wheel `git ls-files` does not list it. Pass: every file is wheel-made, approved, or foreign and recorded and excluded. A foreign file recorded but still waiting for the yes: fail, evidence "waiting on the user's yes: <foreign row id>". Red if: a file is in no record, or a foreign file is tracked.
 - added_in_cut: 0
 
 ### S-0-08 The user's taste is recorded and applied

@@ -1,10 +1,10 @@
-# CHAMBERS
+# WAVES
 
-The wheel grows like a nautilus shell: one chamber open at a time, each sealed behind it. A chamber is sealed only when a session that did not build it proves the seal condition and the board shows it (Charter II). Each chamber adds its smoke checks (SMOKE.md); sealed chambers' checks stay forever. Work for a later chamber waits.
+The wheel grows like a nautilus shell: one wave open at a time, each sealed behind it. A wave is sealed only when a session that did not build it proves the seal condition and the board shows it (Charter II). Each wave adds its smoke checks (SMOKE.md); sealed waves' checks stay forever. Work for a later wave waits.
 
-Design craft is part of every chamber's seal, not a chamber of its own: the board for that chamber (BOARD.md, Design craft) is reviewed by the user against their recorded taste, and their verdict is a `decision` row with `topic: board_review` quoting their words; any change of taste it asks for is a new `topic: taste` row. A board the user finds unclear holds the seal.
+Design craft is part of every wave's seal, not a wave of its own: the board for that wave (BOARD.md, Design craft) is reviewed by the user against their recorded taste, and their verdict is a `decision` row with `topic: board_review` quoting their words; any change of taste it asks for is a new `topic: taste` row. A board the user finds unclear holds the seal.
 
-State: chamber 0 SEALED 2026-11-05 (seal test on a fast-lane build, journal/PROOF-BOARD.md); next: the same loop runs our own wheel with the real user; chamber 1 opens after that.
+State: wave 0 SEALED 2026-11-05 (seal test on a fast-lane build, journal/PROOF-BOARD.md); next: the same loop runs our own wheel with the real user; wave 1 opens after that.
 
 ## 0. The shell (open)
 The cut loop itself: the interview, goals, smoke test, plan-execute-verify, ledger, a designed board, pointer files.
@@ -25,7 +25,7 @@ Builds, in the wheel's folder:
 4. Never certify your own work. Never put personal detail in a tracked file.
 ```
 
-Seal: a `fast`-lane model, given only this seed and a stand-in user card, builds chamber 0 in a fresh folder, runs cut 1 to its seal and cut 2 through its start smoke. A grader in a different session (a different model when one is available) re-runs S-0-01 to S-0-08 on that wheel: all pass, and S-0-03 passes on cut 1. The stand-in user, answering from the card, runs the interview and reviews the board against the taste it recorded. The result is a row in journal/PROOF-BOARD.md. Then the same loop runs our own wheel, with the real user.
+Seal: a `fast`-lane model, given only this seed and a stand-in user card, builds wave 0 in a fresh folder, runs cut 1 to its seal and cut 2 through its start smoke. A grader in a different session (a different model when one is available) re-runs S-0-01 to S-0-08 on that wheel: all pass, and S-0-03 passes on cut 1. The stand-in user, answering from the card, runs the interview and reviews the board against the taste it recorded. The result is a row in journal/PROOF-BOARD.md. Then the same loop runs our own wheel, with the real user.
 
 ## 1. Lugs and the first spoke
 Work items become lugs that carry their own proof; the wheel takes on its first project (a spoke). Seal: one lug planned in the hub, executed in the spoke by the `fast` lane, verified by a non-builder, its goal's measure moved and shown on the board.
