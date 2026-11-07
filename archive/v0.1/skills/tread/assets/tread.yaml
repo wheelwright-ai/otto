@@ -1,0 +1,56 @@
+# Tread template. See ../SKILL.md (section 3 is the rendering rule).
+# Save each snapshot as <hub>/tread/<YYYY-MM-DD>.yaml. Never edit one; draw a new one.
+# A value you did not measure is null. No names, emails, paths, hostnames or machine names.
+
+wheel_label: null               # a pseudonym the user picks, or two random words
+scope: wheel                    # wheel | spoke | group
+drawn_at: null                  # time with UTC offset
+stage: null                     # 0 | 1 | 1+ | 2 | 3
+seed_version: null              # release or commit from seed/PIN.md
+corrects: null                  # file name of the snapshot this one corrects, if any
+
+environment:                    # families only; the full profile stays in .local/
+  os_family: null               # linux | mac | windows | wsl | other
+  agent_runtime:
+    kind: null                  # cli | ide | chat_app | local_runner | other
+    family: null                # product family, only if the user agrees; no minor version
+  model_lanes: []               # any of: frontier, fast, local
+  scheduler_kind: null          # none | session_only | os_scheduler | ci | cloud
+
+# Fixed order and length. Keep every entry, even at depth none, so treads line up.
+# Depth: none | hobby | pro | enterprise. Evidence: a record path or ledger row id.
+modules:
+  - {id: hub,          depth: none, evidence: null}
+  - {id: governor,     depth: none, evidence: null}
+  - {id: engagement,   depth: none, evidence: null}   # skills/engagement-guide
+  - {id: calibration,  depth: none, evidence: null}   # skills/calibration-survey
+  - {id: scenarios,    depth: none, evidence: null}
+  - {id: excavation,   depth: none, evidence: null}   # skills/excavation-migration
+  - {id: lugs,         depth: none, evidence: null}
+  - {id: sharing,      depth: none, evidence: null}   # skills/sharing-flavors
+  - {id: advisors,     depth: none, evidence: null}
+  - {id: factory,      depth: none, evidence: null}   # cuts
+  - {id: autopilot,    depth: none, evidence: null}
+  # Local modules go here, sorted by id:
+  # - {id: null, depth: none, evidence: null, local: true, text: null}
+
+enhancements:                   # drawn as marks at radius 100 in their module's segment
+  - id: null
+    module: null                # a module id from the list above
+    text: null                  # one plain line: what it does
+    since: null                 # date
+    lift: null                  # a lift id below, or null (an idea: hollow mark)
+
+lifts:                          # measured only; forecasts live in nominations
+  - id: null
+    item: null                  # a module id or an enhancement id
+    metric: null
+    unit: null
+    direction: null             # higher_better | lower_better
+    baseline: null
+    after: null
+    n: null                     # sample size
+    window: null                # e.g. 14d
+    source: null                # where the number comes from
+    evidence: []                # ledger row ids
+    measured_by: null           # role, e.g. reviewer; builder-only is weak evidence

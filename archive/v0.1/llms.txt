@@ -1,0 +1,22 @@
+# Wheelwright
+> Prose definitions an agent uses to build and evolve a user's own AI-work wheel: a hub first, then spokes, then a factory, governed by evidence.
+
+## Docs
+- [START](START.md): the bootstrap; read first
+- [Charter](CHARTER.md): principles and governance
+- [Core](CORE.md): shared vocabulary, record shapes and the Charter Check
+- [Hub design](hub/DESIGN.md): what the stage 0 hub holds and how to build it
+- [Outline](journal/OUTLINE.md): build history and open items (not instructions)
+- [Skill: governor](skills/governor/SKILL.md): write, measure and enforce boundaries; stop work safely
+- [Skill: engagement-guide](skills/engagement-guide/SKILL.md): which conversation to have with the user, and when
+- [Skill: calibration-survey](skills/calibration-survey/SKILL.md): the builder predicts its scenario grades before grading, to measure how far to trust it
+- [Skill: excavation-migration](skills/excavation-migration/SKILL.md): find what the user already has and move it safely into a new wheel
+- [Skill: lugs](skills/lugs/SKILL.md): write, size, move and certify units of work that carry their own proof
+- [Skill: advisors](skills/advisors/SKILL.md): charter and run specialist agents; the hub's learning loop
+- [Skill: tread](skills/tread/SKILL.md): a wheel's feature fingerprint as a round picture; find similar wheels, show evolution
+- [Skill: sharing-flavors](skills/sharing-flavors/SKILL.md): compare, adopt and share ways of working, with evidence, credit and safety
+
+## Optional
+- [Journal](journal/genesis-events.jsonl): how this seed was built, patterns and anti-patterns
+- [Ruler v2 notes](journal/ruler-v2-notes.md): eval problems held back while the ruler is frozen (not instructions)
+- [Scenarios](scenarios/): conformance checks, run by an agent that did not build the wheel

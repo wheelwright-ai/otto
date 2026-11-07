@@ -1,0 +1,69 @@
+# Calibration survey template. See ../SKILL.md.
+# Fill the builder half and append it to the ledger as a `prediction` row BEFORE any grading starts.
+# A value you did not measure is null. No names, emails, home paths or machine names.
+
+survey_id: null                 # e.g. cal-stage0-birth-1
+build_kind: null                # birth | rebuild | stage_move | seed_upgrade
+stage: null                     # 0 | 1 | 1+ | 2 | 3
+tier: null                      # incarnation | release (scenarios/README.md)
+
+builder:                        # written by the builder, before grading
+  recorded_at: null             # time with UTC offset; MUST precede every grade
+  who:
+    agent: null
+    model: null
+    model_version: null
+    os_family: null             # linux | mac | windows | wsl | other
+    model_lane: null            # frontier | fast | local (CORE.md, model lane)
+    interactive: null           # true | false
+    stand_in: null              # true when a stand-in answer card answered for the user
+    seed_version: null          # release or commit from seed/PIN.md
+  cost:
+    wall_minutes: null
+    tokens: null
+    sessions: null
+    helper_agents: null
+  prediction:
+    graded_total: null          # scenarios that will be graded
+    predicted_pass_count: null
+    scenarios:                  # one entry per scenario in scope
+      - id: "001"
+        predict: null           # pass | fail | not_run
+        confidence: null        # sure | likely | guess
+        why: null
+  improvised:                   # where the seed was silent and you chose
+    - where: null               # file and section that left the gap
+      chose: null
+      why: null
+  unclear:                      # the most valuable answer
+    - where: null               # file and section
+      read_as: null
+      could_mean: null
+      would_help: null          # one sentence that would have made it clear
+  contradictions:
+    - between: [null, null]     # two file and section references
+      note: null
+  checked_for_unclear: null     # if nothing was unclear: what you checked
+
+user:                           # the user's own words; null if skipped
+  asked_at: null
+  fit: null                     # yes | partly | no
+  fit_note: null
+  friction: null
+  trust: null                   # yes | not_yet
+  trust_why: null
+
+results:                        # filled after grading, by anyone but the builder
+  graded_at: null
+  grader: {agent: null, model: null}
+  actual_pass_count: null
+  per_scenario:
+    - id: "001"
+      grade: null               # pass | fail | not_run
+      runs: null
+      pass_rate_mean: null
+      pass_rate_stddev: null
+  calibration_error: null       # predicted_pass_count - actual_pass_count
+  overconfident: []             # predicted pass, graded fail
+  underconfident: []            # predicted fail, graded pass
+  late_prediction: false        # true if the prediction came after grading began

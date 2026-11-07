@@ -1,0 +1,71 @@
+# Nomination template. See ../SKILL.md (sections 4 to 8).
+# One file per nomination. From stage 1 it is filed as a lug in the hub's records; at stage 0 keep it with the open items in records.md. Each move also gets a ledger row.
+# A value you did not measure is null. No names, emails, paths, hostnames or machine names.
+
+id: null                        # e.g. nom-retry-uploads-from-quiet-otter
+state: nominated                # nominated | trialed | adopted | declined
+direction: incoming             # incoming (adopting) | outgoing (offering to share)
+level: null                     # spoke | group | wheel | fleet
+group: null                     # the group that ranks and funds the trial, if any
+
+item:
+  kind: item                    # item | flavor (a flavor lists each item below)
+  ids: []                       # stable item ids, prefixed with the source wheel_label
+  title: null
+  label: null                   # proven | idea
+  source:
+    wheel_label: null           # pseudonym only
+    release: null               # version of the release it came in (fleet only)
+    pinned_hash: null           # content hash or commit, recorded before reading
+    signature_ok: null          # true | false; refuse unless true (fleet only)
+    tread_similarity: null      # 0..1, from skills/tread section 5
+  claimed_lift:                 # copied from the source; null for an idea
+    metric: null
+    unit: null
+    direction: null             # higher_better | lower_better
+    baseline: null
+    after: null
+    n: null
+    window: null
+
+nominated:
+  at: null                      # time with UTC offset
+  by: null                      # role: user | hub | advisor name
+  why: null                     # why it fits this wheel
+  mandate_conflicts: []         # each mandate it might break; empty if none
+  scan:                         # the user reads the full text first (fleet items)
+    read_by_user_at: null
+    flags: []                   # e.g. asks to run a command, send data out, loosen a boundary
+
+trial:                          # written BEFORE the trial starts
+  forecast: null                # claimed lift adjusted by similarity, with its unit
+  decision_rule: null           # what result means adopt, and what means decline
+  counter_metric: null          # what must not get worse
+  mode: null                    # shadow | slice | full
+  funded_by: null               # the boundary or group share that pays for it
+  started_at: null
+  ended_at: null
+  judged_by: null               # MUST differ from nominated.by
+
+result:                         # filled after the trial
+  measured:
+    baseline: null
+    after: null
+    n: null
+  lift: null                    # ours, with its unit
+  claim: null                   # theirs, with its unit
+  gap: null                     # lift minus claim
+  why_gap: null                 # if you can tell; else null
+
+decision:
+  at: null
+  decided_by: null              # user; from stage 2, the hub when nothing loosens and no mandate is touched
+  reason: null                  # required for both adopted and declined
+  ledger_row: null
+  tread_snapshot: null          # the new tread file, if adopted
+
+share_back:                     # credit to the source (incoming) or the offer (outgoing)
+  user_said: null               # yes | no | not_now
+  asked_at: null
+  sent_at: null
+  package_text: null            # outgoing: the exact text the user approved
