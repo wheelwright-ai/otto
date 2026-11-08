@@ -17,7 +17,7 @@ A cut is one pass of this loop. Tick each step in one tool call: read the clock 
 
 - [ ] 01 goals: append the `cut` row, `phase: open`; read GOALS.md. No active goal with a measure: run the interview.
 - [ ] 02 smoke start: run all the wheel's SMOKE.md checks; one `smoke` row each, `phase: start`.
-- [ ] 03 plan: a `frontier` session plans when available, else a `fast` builder plans, recording `planner_lane: fast`. Each item names goal id, measure and baseline, executor lane, verifier, and steps a `fast` model follows without reasoning. A failed start check becomes an item.
+- [ ] 03 plan: a `frontier` session plans when available, else a `fast` builder plans, recording `planner_lane: fast`. Each item names goal id (from wave 1, its lug's signed-off initiative: WORK.md), measure and baseline, executor lane, verifier, and steps a `fast` model follows without reasoning. A failed start check becomes an item.
 - [ ] 04 execute: follow the steps; touch nothing outside the item; record evidence.
 - [ ] 05 verify: a session that neither planned nor executed the item runs its check; `verdict` row.
 - [ ] 06 smoke end: run every check again; `phase: end`.

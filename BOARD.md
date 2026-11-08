@@ -13,7 +13,7 @@ How the wheel's `BOARD.md` is made. The board is where the user and every agent 
 ## Order (fixed)
 1. **Goals.** Each active goal: its id, its metric, baseline -> latest value -> target, and the rows that measured it.
 2. **Smoke, start vs end.** For the current or last cut: each check, its start result -> end result, both row ids. A check that went from pass to fail is marked and names its remediation row.
-3. **Work through plan, execute, verify.** Counts per state, each with its item ids; then one line per item: id, goal, state, planner lane, and every `verdict` row for it with its result (for example `verdicts: fail r-000032, pass r-000051`), or `verdicts: none yet`. A failed verdict is never left off.
+3. **Work through plan, execute, verify.** Counts per state, each with its item ids; then one line per item: id, goal, state, planner lane, and every `verdict` row for it with its result (for example `verdicts: fail r-000032, pass r-000051`), or `verdicts: none yet`. A failed verdict is never left off. From wave 1 the lines are grouped goal, then initiative (computed progress, sign-off), then lugs by rank with kind and status, then the completed history (WORK.md).
 4. **Remediations.** Each `remediation` row this cut: the check, what was fixed, the re-run row.
 
 ## Design craft

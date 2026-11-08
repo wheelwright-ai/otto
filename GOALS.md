@@ -7,6 +7,7 @@ Template. The wheel keeps its own `GOALS.md`, made from the block below. Goals a
 - A measure has `metric`, `baseline` (read before work starts, or `null` with the cut that will read it), `target` and `source`.
 - Goals change often. Every change is a revision: the next `rev` number, a line in the history below and a ledger row of kind `goal` with the reason and the user's words. Revisions are normal; a stale goal is not.
 - Never delete a goal. Mark it `met`, `paused` or `dropped`, with the revision that did it.
+- Agree goals with the user before planning any work for them; each project the wheel takes on agrees its own the same way. For anything meant to reach other people, order the goals along the path to market: it works for the user, it is proven with real users, it earns, it grows. Work for a later goal waits for the one before it unless the user says otherwise.
 - Only the user adds, revises or drops a goal. The wheel proposes (START step 09); the user's yes is quoted in the row.
 - No personal detail: write "the user", never a name.
 

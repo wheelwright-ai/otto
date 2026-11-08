@@ -32,7 +32,7 @@ Your conversations can keep their value too: [Tracks](https://github.com/wheelwr
 - CHARTER.md: principles and governance
 - START.md: where Otto begins, the order of authority and the loop
 - SMOKE.md: the living check of what must always hold
-- GOALS.md, WORK.md, BOARD.md: your goals, the work and its record, the board
+- GOALS.md, WORK.md, BOARD.md: your goals; the work (lugs and initiatives), its proof, saving and record; the board
 - WAVES.md: the waves and what seals each one (earlier records call a wave a chamber)
 - archive/v0.1/: the earlier version, kept for reference
 - journal/: how this prompt was built (history, not instructions)

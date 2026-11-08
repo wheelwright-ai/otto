@@ -28,16 +28,16 @@ Builds, in the wheel's folder:
 Seal: a `fast`-lane model, given only this seed and a stand-in user card, builds wave 0 in a fresh folder, runs cut 1 to its seal and cut 2 through its start smoke. A grader in a different session (a different model when one is available) re-runs S-0-01 to S-0-08 on that wheel: all pass, and S-0-03 passes on cut 1. The stand-in user, answering from the card, runs the interview and reviews the board against the taste it recorded. The result is a row in journal/PROOF-BOARD.md. Then the same loop runs our own wheel, with the real user.
 
 ## 1. Lugs and the first spoke
-Work items become lugs that carry their own proof; the wheel takes on its first project (a spoke). Seal: one lug planned in the hub, executed in the spoke by the `fast` lane, verified by a non-builder, its goal's measure moved and shown on the board.
+Work items become lugs grouped into initiatives, and work is saved turn by turn in its own worktree (WORK.md); the wheel takes on its first project (a spoke), whose goals are agreed with the user first (GOALS.md). Seal: one initiative written to the template, passed by a fresh reader and signed off by the user; one of its lugs planned in the hub, executed in the spoke by the `fast` lane, verified by a non-builder, its goal's measure moved and shown on the board.
 
 ## 2. Hub to spoke
 The spoke reports up; the hub advises from what it measured; asks and replies travel as records. Seal: one ask and its reply recorded on both sides; a moved hub notices its stale locations.
 
 ## 3. Governor depth and autopilot
-Written limits on spend, time, load, scope, autonomy, risk and privacy; every launch path known; cuts run while the user is away. Seal: a stop proven against the full launch-path inventory; an unattended cut stays inside every limit; a loosening without the user's yes is refused.
+Written limits on spend, time, load, scope, autonomy, risk and privacy; every launch path known; cuts run while the user is away. A conductor runs only after the user's ruling: it wakes projects fairly (every active project once per cycle before any gets a second turn: a base share each, plus more by the user's priority and by what projects asked for), records each wake before launching it, spends autopilot work only on lugs of signed-off initiatives, and stops by itself on the user's pause, on two rounds that finish nothing, or on anything that needs the user. It never sends, publishes, deletes, spends money or merges a live project. Seal: a stop proven against the full launch-path inventory; an unattended cut stays inside every limit; a loosening without the user's yes is refused.
 
 ## 4. Factory and advisors
-Shared changes built once and shipped to every spoke; specialist advisors propose and never apply. Seal: one change shipped to two spokes with its measured lift; one advisor proposal applied by a different role.
+Shared changes built once and shipped to every spoke; specialist advisors propose and never apply. Advisors are optional, added only when the user wants them: small specialists per project (for example health, security, a work expediter that sorts lugs by the capacity they fit, a historian that mines past sessions for proposals). Each keeps its purpose, cadence, last run and last summary; runs only when due; and leaves a finding, a request or "nothing to report" (three nothings in a row lengthen its cadence). Before working, a project phones home: it asks the hub for newer advisor definitions and any notes for it, so lessons reach every project on its next wake. Seal: one change shipped to two spokes with its measured lift; one advisor proposal applied by a different role.
 
 ## 5. Fleet sharing and tread
 Wheels compare and adopt ways of working with evidence, credit and no personal detail; each wheel's feature fingerprint (its tread) shows its evolution. Seal: one pattern adopted from another wheel with a measured lift, and nothing personal crossed.
