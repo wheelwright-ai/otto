@@ -8,6 +8,8 @@ Every item passes through three hands. The verifier is always a different sessio
 2. **Execute** (the named lane). Does the steps in order and nothing else, then records what each step printed. It never writes `verified`.
 3. **Verify** (the named verifier). Runs the item's check against the real thing and appends a `verdict` row: `pass` or `fail`, with the output quoted. Only a `pass` verdict moves the item to `verified`.
 
+**A check the verifier cannot run itself** (its sandbox refuses the command, or the output is too large to read) fails on access, not on substance. The planner prevents that: before the verifier starts, it exports what the check needs to files the verifier can read (for example `.local/<item>/`: a file's content at a commit, a diff summary, the exit codes of commands it ran), and the check names those files. The verifier still judges the evidence itself; when it doubts an exported file, it says so and the item stays unverified.
+
 **A verifier whose ledger append is blocked** (a guard, a read-only sandbox) prints its verdict row as visible output: the full JSON row, without `id` and `at`. The executor appends that row verbatim, adding only `id`, `at` (its own clock reading, as for any row it appends) and `appended_by` naming itself (`{"role": "executor", "session": "s-1"}`). The verdict's `actor` stays the verifier; the executor never edits the text, result or evidence.
 
 ## Item shape
